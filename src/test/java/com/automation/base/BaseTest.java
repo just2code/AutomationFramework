@@ -8,7 +8,6 @@ import org.testng.annotations.BeforeMethod;
 
 import com.automation.config.ConfigReader;
 import com.automation.factory.DriverFactory;
-import com.automation.factory.DriverFactory_old;
 import com.automation.pages.LoginPage;
 import com.automation.utils.WaitUtils;
 
@@ -31,7 +30,6 @@ public abstract class BaseTest {
 	{
 		String browser = configReader.get("browser");
 		int timeout = Integer.valueOf(configReader.get("timeout"));
-		//driver = DriverFactory_old.getBrowser(browser);
 		DriverFactory.initDriver(browser);
 		driver = DriverFactory.getDriver();
 		waitUtils = new WaitUtils(driver,timeout);
@@ -39,12 +37,9 @@ public abstract class BaseTest {
 	}
 	
 	@AfterMethod
-	public void afterMethod()
+	public void tearDown()
 	{
-		if(driver!=null)
-		{
-			driver.quit();
-		}
+		DriverFactory.quitDriver();
 		
 	}
 

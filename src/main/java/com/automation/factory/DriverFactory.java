@@ -4,7 +4,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 
-public class DriverFactory {
+public final class DriverFactory {
 	
 	private static final ThreadLocal<WebDriver> driver = new ThreadLocal<>();
 	
@@ -15,7 +15,7 @@ public class DriverFactory {
 	
 	public static void initDriver(String browser)
 	{
-		if(browser==null||browser.isEmpty())
+		if(browser==null||browser.isBlank())
 		{
 			throw new RuntimeException("browser name is empty");
 		}
@@ -25,6 +25,9 @@ public class DriverFactory {
 		}else if(browser.equalsIgnoreCase("ie"))
 		{
 			driver.set(new InternetExplorerDriver());
+		}else
+		{
+			throw new IllegalArgumentException("Unsupported browser "+browser);
 		}
 		
 	}
@@ -37,8 +40,13 @@ public class DriverFactory {
 	
 	public static void quitDriver()
 	{
-		driver.get().quit();
-		driver.remove();
+		WebDriver webDriver= driver.get();
+		if(webDriver!=null)
+		{
+			driver.get().quit();
+			driver.remove();
+		}
+		
 	}
 	
 	
