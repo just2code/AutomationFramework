@@ -10,7 +10,6 @@ public class LoginPage extends BasePage{
 	private By username = By.id("Username");
     private By password = By.name("Password");
     private By loginButton = By.name("login");
-    //private By oneTrustAcceptButton = By.id("onetrust-accept-btn-handler");
 
     public LoginPage(WebDriver driver,WaitUtils waitUtils)
 	{
@@ -19,7 +18,6 @@ public class LoginPage extends BasePage{
     
     public DashboardPage login(String username, String password)
     {	    	 
-    		//waitUtils.waitForClickable(oneTrustAcceptButton).click();
     		dismissCookieBannerIfPresent();
 	    	waitUtils.waitForVisibility(this.username).sendKeys(username);
 	    	waitUtils.waitForVisibility(this.password).sendKeys(password);

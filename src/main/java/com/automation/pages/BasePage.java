@@ -22,11 +22,10 @@ public abstract class BasePage {
 	public void dismissCookieBannerIfPresent()
 	{
 		try {
-			driver.findElement(oneTrustAcceptButton).click();
+			waitUtils.waitForClickable(oneTrustAcceptButton).click();
 		}catch(TimeoutException e)
 		{
-			//This is left blank because the cookie button may or may not appear
-			System.out.println("The cookie button is not present or clickable");
+			System.out.println("The cookie button is not present to click");
 		}
 	}
 

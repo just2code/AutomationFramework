@@ -10,7 +10,9 @@ public class SearchTest extends BaseTest{
 	public void searchTest()
 	{
 		System.out.println("Search test | Thread : "+Thread.currentThread().getName()+" | Driver : "+driver);
+		driver.manage().window().maximize();
 		driver.get("https://www.yahoo.com");
+		
 	}
 
 }

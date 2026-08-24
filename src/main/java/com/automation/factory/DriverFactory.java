@@ -43,10 +43,9 @@ public final class DriverFactory {
 		WebDriver webDriver= driver.get();
 		if(webDriver!=null)
 		{
-			driver.get().quit();
+			webDriver.quit();
 			driver.remove();
-		}
-		
+		}		
 	}
 	
 	

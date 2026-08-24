@@ -6,14 +6,16 @@
 <suite name="AutomationSuite"
        parallel="methods"
        thread-count="2">
-
+	<listeners>
+		<listener class-name="com.automation.listeners.ScreenshotListener"/>
+		<listener class-name="com.automation.listeners.RetryTransformer"></listener>
+	</listeners>
     <test name="SeleniumTests">
-
         <classes>
+        		<class name= "com.automation.tests.suiteHooks"/>
             <class name="com.automation.tests.LoginTest"/>
             <class name="com.automation.tests.SearchTest"/>
         </classes>
-
     </test>
 
 </suite>

@@ -2,24 +2,41 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2026-08-19T12:03:30 IST" name="Default suite" finished-at="2026-08-19T12:03:50 IST" duration-ms="19311">
+  <suite started-at="2026-08-24T09:00:49 IST" name="Default suite" finished-at="2026-08-24T09:01:06 IST" duration-ms="17349">
     <groups>
     </groups>
-    <test started-at="2026-08-19T12:03:30 IST" name="Default test" finished-at="2026-08-19T12:03:50 IST" duration-ms="19311">
+    <test started-at="2026-08-24T09:00:49 IST" name="Default test" finished-at="2026-08-24T09:01:06 IST" duration-ms="17349">
       <class name="com.automation.tests.LoginTest">
-        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.automation.tests.LoginTest@7c729a55]" started-at="2026-08-19T12:03:30 IST" name="loadConfig" finished-at="2026-08-19T12:03:30 IST" duration-ms="17" status="PASS">
+        <test-method is-config="true" signature="loadConfig()[pri:0, instance:com.automation.tests.LoginTest@4f18837a]" started-at="2026-08-24T09:00:49 IST" name="loadConfig" finished-at="2026-08-24T09:00:49 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loadConfig -->
-        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.LoginTest@7c729a55]" started-at="2026-08-19T12:03:30 IST" name="setUp" finished-at="2026-08-19T12:03:35 IST" duration-ms="4764" status="PASS">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:com.automation.tests.LoginTest@4f18837a]" started-at="2026-08-24T09:00:49 IST" name="setUp" finished-at="2026-08-24T09:00:53 IST" duration-ms="4019" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method signature="validLogin()[pri:0, instance:com.automation.tests.LoginTest@7c729a55]" started-at="2026-08-19T12:03:35 IST" name="validLogin" finished-at="2026-08-19T12:03:47 IST" duration-ms="12063" status="PASS">
+        <test-method signature="loginWithMultipleCredentials(java.lang.String,java.lang.String,boolean)[pri:0, instance:com.automation.tests.LoginTest@4f18837a]" started-at="2026-08-24T09:00:53 IST" name="loginWithMultipleCredentials" data-provider="loginCredentials" finished-at="2026-08-24T09:01:04 IST" duration-ms="11067" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Russia123]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[Test@123]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[true]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- validLogin -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@7c729a55]" started-at="2026-08-19T12:03:47 IST" name="tearDown" finished-at="2026-08-19T12:03:50 IST" duration-ms="2413" status="PASS">
+        </test-method> <!-- loginWithMultipleCredentials -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:com.automation.tests.LoginTest@4f18837a]" started-at="2026-08-24T09:01:04 IST" name="tearDown" finished-at="2026-08-24T09:01:06 IST" duration-ms="2202" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
