@@ -30,6 +30,7 @@ public class LoginTest extends BaseTest{
 		  
 		  //dashboardPage.expandPersonalDetails();
 		  //We have initialized a protected softAssert in BaseTest call the object here
+		  SoftAssert softAssert = new SoftAssert();
 		  softAssert.assertTrue(dashboardPage.isLogoVisible(),"Logo is not visible");
 		  softAssert.assertAll();
 		  

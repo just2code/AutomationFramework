@@ -1,6 +1,9 @@
 package com.automation.base;
 
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
@@ -17,12 +20,10 @@ public abstract class BaseTest {
 	protected WebDriver driver;
 	protected WaitUtils waitUtils;
 	protected ConfigReader configReader;
-	protected SoftAssert softAssert=new SoftAssert();
 	@BeforeClass
 	public void loadConfig()
 	{
-		configReader = ConfigReader.getInstance();
-		
+		configReader = ConfigReader.getInstance();		
 	}
 	
 	
@@ -34,7 +35,6 @@ public abstract class BaseTest {
 		DriverFactory.initDriver(browser);
 		driver = DriverFactory.getDriver();
 		waitUtils = new WaitUtils(driver,timeout);
-			
 	}
 	
 	@AfterMethod
@@ -43,5 +43,8 @@ public abstract class BaseTest {
 		DriverFactory.quitDriver();
 		
 	}
+	
+	
+	
 
 }

@@ -14,15 +14,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class WaitUtils {
 
-    /*private WebDriverWait wait;
-     
-
-    public WaitUtils(WebDriver driver,int timeout) {
-        // initialize wait
-    		this.wait = new WebDriverWait(driver,Duration.ofSeconds(timeout));
-    }*/
-	
-	private Wait<WebDriver> wait;
+  	private Wait<WebDriver> wait;
 	
 	public WaitUtils(WebDriver driver, int timeout)
 	{
